@@ -1,0 +1,18 @@
+https://github.com/tsrana/s1-movie-catalog-service
+
+docker build -t openshift-demo-img --file Dockerfile .
+
+docker images
+
+docker run -it --name=ctr-openshift-demo-img -p 8081:8081 -d openshift-demo-img
+
+docker run -it --name=ctr-openshift-demo-img -p 8082:8081 -d openshift-demo-img --net=host
+
+docker run -it --name=ctr-openshift-demo-img -p 8081:8081 -d openshift-demo-img --ip=127.0.0.1
+
+ 192.168.99.1
+ 
+ http://localhost:8081/shift/call-operator
+ 
+ 
+ curl http://192.168.99.1:8081/shift/call-operator
